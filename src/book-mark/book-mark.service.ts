@@ -3,7 +3,7 @@ import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
 export class BookMarkService {
-  constructor(private readonly prisma: PrismaService) { }
+  constructor(private readonly prisma: PrismaService) {}
   findAll(userId: number) {
     return this.prisma.bookmark.findMany({
       where: {
@@ -72,5 +72,4 @@ export class BookMarkService {
     }
     return bookmark;
   }
-
 }
